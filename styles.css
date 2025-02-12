@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@1,100..900&display=swap');
+/* Stephen Carey */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Root styles */
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dk-gray: #222222;
+    --lt-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+    --head-font: "Molle", "Times New Roman", serif;
+    --body-font: "Montserrat", "Times New Roman", serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* skip link */
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip:focus{
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* Hidden Styles */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Body Styles */
+body {
+    font-family: var(--body-font);
+    color: var(--dk-gray);
+    line-height: 1.4;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to bottom, var(--teal), rgba(255,255,255,1));
+    width: 100%;
+    padding: 1rem;
+}
+
+#logo img{
+    width: 40%;
+}
+
+ul {
+    position: absolute;
+    right: 10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#menu-toggle > label {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    background-color: var(--yellow);
+    text-align: center;
+    padding: 5px 50px;
+}
+
+#menu-toggle > input {
+    opacity: 0;
+}
+
+
+
+/* Heading Styles */
+h1, h2, h3 {
+    font-size: 2rem;
+    font-family: var(--head-font);
+}
+
+h4, p, q, small, nav, button, form {
+    font-size: 1.1rem;
+    font-family: var(--body-font);
+}
+
+img{
+    max-width: 100%;
+}
