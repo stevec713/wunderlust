@@ -103,7 +103,7 @@ body {
 header {
     background: linear-gradient(to bottom, var(--teal), rgba(255,255,255,1));
     width: 100%;
-    padding: 1rem;
+    padding-top: .5rem;
 }
 
 #logo img{
@@ -123,22 +123,32 @@ ul {
     display: block;
     position: absolute;
     right: 0;
-    top: 2rem;
+    top: 1.9rem;
     background-color: var(--yellow);
     text-align: center;
     padding: 5px 50px;
+    z-index: 2;
 }
 
 #menu-toggle > input {
     opacity: 0;
+    position: relative;
+    z-index: 2;
 }
 
-
+#menu-toggle > input:checked ~ ul {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 100%;
+    height: auto;
+}
 
 /* Heading Styles */
 h1, h2, h3 {
     font-size: 2rem;
     font-family: var(--head-font);
+    padding: .5rem 1rem;
 }
 
 h4, p, q, small, nav, button, form {
