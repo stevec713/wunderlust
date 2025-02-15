@@ -62,8 +62,11 @@ table {
     --black: #000000;
     --head-font: "Molle", "Times New Roman", serif;
     --body-font: "Montserrat", "Times New Roman", serif;
-    box-sizing: border-box;
     font-size: 16px;
+}
+
+* {
+    box-sizing:border-box;
 }
 
 /* skip link */
@@ -106,6 +109,251 @@ header {
     padding-top: .5rem;
 }
 
+header img {
+    width: 30%;
+} 
+
+header h1 {
+    padding: 0 7.5%;
+}
+
+header p {
+    padding: 0 7.5%;
+}
+
+/*menu*/
+ul {
+    position: absolute;
+    right: 10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#menu-toggle > label {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    background-color: var(--yellow);
+    text-align: center;
+    width: 40%;
+    padding: 5px 30px;
+    z-index: 2;
+}
+
+#menu-toggle > input {
+    position: absolute;
+    right: 10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#menu-toggle > input:checked ~ ul {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 100%;
+    height: auto;
+    background-color: var(--teal);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 auto;
+}
+
+#menu-toggle > input:checked ~ ul li {
+    width: 100%;
+}
+
+#menu-toggle > input:checked ~ ul a {
+    display: block;
+    width: 100%;
+    border-top: 2px solid var(--black);
+    align-self: center;
+    text-align: center;
+    padding: 30px 0;
+    color: var(--dk-gray);
+    text-decoration: none;
+}
+
+#menu-toggle > input:checked + label {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--black);
+    text-align: center;
+    padding: 5px 0;
+    z-index: 2;
+    color:var(--lt-gray);
+    width: 100%;
+}
+
+
+
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-size: 2rem;
+    font-family: var(--head-font);
+    padding: 7.5% 7.5% 0 7.5%;
+}
+
+h4, p, q, small, nav, button, form {
+    font-size: 1.1rem;
+    font-family: var(--body-font);
+}
+
+#intro p {
+    padding: 0 7.5%;
+}
+
+#img-grid {
+    display: grid;
+    gap: .75rem;
+}
+
+
+/* Plan */
+#plan {
+    background-color: var(--yellow);
+    padding-bottom: 1rem;
+}
+
+#plan > div {
+    display: grid;
+    gap: .75rem;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#plan section {
+    background-color: var(--teal);
+    text-align: center;
+    padding: .5rem;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+}
+
+h4 {
+    font-weight: bold;
+    padding: .5rem 0;
+}
+
+#plan img {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+/* testimonials */
+#testimonials > div {
+    display: grid;
+    gap: .75rem;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#testimonials section {
+    text-align: center;
+}
+
+#testimonials img {
+    width: 70%;
+}
+
+#testimonials h4 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+#testimonials q {
+    font-style: italic;
+}
+
+#testimonials q::before, #testimonials q::after {
+    content:"\""
+}
+
+
+/* about */
+#about {
+    background-color: var(--blue);
+    padding-bottom: 1rem;
+}
+
+#about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#about section {
+    text-align: center;
+}
+
+#about img {
+    height: 90px;
+}
+
+form {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, select, input::placeholder {
+    display: block;
+    width: 100%;
+    font-family: var(--body-font);
+    color: var(--black);
+}
+
+input, select {
+    border: 2px solid var(--purple);
+    padding: 15px 5px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset label, fieldset input {
+    display: inline-flex;
+}
+
+[type="submit"] {
+    background-color: var(--purple);
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lt-gray);
+}
+
+footer p, footer a {
+    font-size: .8rem;
+    text-decoration: none;
+    color: var(--black);
+}
+
+/*
 #logo img{
     width: 40%;
     max-width: 200px;
@@ -190,7 +438,11 @@ header p {
     padding: 0 1rem 1rem 1rem;
 }
 
-/* Heading Styles */
+
+
+
+
+
 h1, h2, h3 {
     font-size: 2rem;
     font-family: var(--head-font);
@@ -205,9 +457,13 @@ img{
     max-width: 100%;
 }
 
-/* Body Styles */
 
-/* Intro */
+
+
+
+
+
+
 #intro {
     margin-bottom: 1rem;
 }
@@ -232,7 +488,15 @@ main h2 {
     height: auto;
 }
 
-/* plan */
+
+
+
+
+
+
+
+
+
 #plan {
     background-color: var(--yellow);
     padding: 1rem;
@@ -275,7 +539,15 @@ main h2 {
     width: 70%;
 }
 
-/* Testimonials */
+
+
+
+
+
+
+
+
+
 #testimonials {
     padding: 1rem;
 }
@@ -316,7 +588,14 @@ main h2 {
     content:"\""
 }
 
-/* About */
+
+
+
+
+
+
+
+
 #about {
     background-color: var(--blue);
     padding: 1rem;
@@ -347,7 +626,17 @@ main h2 {
     text-align: center;
 }
 
-/* Contact */
+
+
+
+
+
+
+
+
+
+
+
 #contact {
     padding: 1rem;
 }
@@ -364,16 +653,22 @@ form, #names {
     width: 100%;
 }
 
-label, input {
+input::placeholder {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    color: var(--black);
+}
+
+#contact label, #contact input {
     display: block;
     width: 100%;
 }
 
-label,legend {
+#names, #contact legend, #nums > label {
     font-weight: bold;
 }
 
-input {
+#contact input, select {
     padding: 1rem .5rem;
     width: calc(100% - 1rem);
     border: 2px solid var(--purple);
@@ -384,7 +679,11 @@ input::placeholder {
     font-size: 1.1em;
 }
 
-input[type="radio"] {
+
+
+
+
+#contact input[type="radio"] {
     appearance: none;
     background-color: #fff;
     margin: 0;
@@ -399,10 +698,10 @@ input[type="radio"] {
     place-content: center;
 }
 
-.radio-control {
+#contact .radio-control {
     font-family: system-ui, sans-serif;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 400;
     line-height: 1.1;
     display: grid;
     grid-template-columns: 1em auto;
@@ -410,7 +709,7 @@ input[type="radio"] {
     margin-top: .2em;
 }
 
-input[type="radio"]::before {
+#contact input[type="radio"]::before {
     content: "";
     width: 0.65em;
     height: 0.65em;
@@ -420,16 +719,145 @@ input[type="radio"]::before {
     box-shadow: inset 1em 1em var(--form-control-color);
   }
 
-  input[type="radio"]:checked::before {
+  #contact input[type="radio"]:checked::before {
     transform: scale(1);
   }
 
-input[type="radio"]:focus {
+  #contact input[type="radio"]:focus {
     outline: max(2px, 0.15em) solid currentColor;
     outline-offset: 0.5em;
     background-color: var(--purple);
     width: 2em;
     height: 1.6em;
-    margin-top: 10px;
+    margin-top: 9px;
     margin-left: 8px;
 }
+
+.radio-input {
+    display: inline-block;
+    width: 20%;
+    margin: 15px 0;
+}
+
+
+
+
+
+#selects > label {
+    font-weight: bold;
+}
+
+#selects select {
+    appearance: none;
+    width: 100%;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+#selects option {
+    font-family: var(--body-font);
+}
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select::after {
+    position: absolute;
+    content: "";
+    right: 2rem;
+    border-bottom: 2px solid var(--purple);
+    border-right: 2px solid var(--purple);
+    display: inline-block;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+
+#selects option {
+    font-family: var(--body-font);
+}
+
+#selects [type=submit] {
+    display: block;
+    background-color: var(--purple);
+    width: 100%;
+    color: var(--lt-gray);
+    font-family: var(--body-font);
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: var(--lt-gray);
+    text-align: center;
+}
+
+footer a, footer p {
+    font-size: .9rem;
+    padding: .5rem;
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+}
+
+@media screen and (min-width: 600px) {
+    header, main, footer {
+        padding: 1rem;
+    }
+
+    header > a {
+        display: inline;
+        width: 25%;
+    }
+
+    #logo img {
+        display: inline;
+
+    }
+
+    header h1 {
+        display: inline-block;
+        width: 60%;
+    }
+
+    header > p {
+        display: inline-block;
+        
+    }
+
+    header ul {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: calc(100% - 1rem);
+        height: auto;
+        overflow:auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5rem;
+        padding: 1rem;
+    }
+
+    header li {
+        background-color: var(--white);
+        padding: 1rem;
+        font-size: .8rem;
+        text-transform: uppercase;
+        flex: 1 1 25%;
+        text-align: center;
+
+    }
+
+    header a {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    #menu-toggle > label {
+        display: none;
+    }
+}*/
