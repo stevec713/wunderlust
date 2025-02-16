@@ -481,7 +481,7 @@ a:focus, input:focus, select:focus, .radio-input input:focus + span {
 /* hover */
 @media (hover:hover) {
     #menu-toggle a:hover {
-        background-color: var(--white);
+        background-color: var(--yellow);
     }
 
     #menu-toggle label:hover {
@@ -496,6 +496,10 @@ a:focus, input:focus, select:focus, .radio-input input:focus + span {
 
     #contact input:hover, select:hover {
         border-color: var(--blue);
+    }
+
+    input[type=radio]:hover {
+        background-color: var(--lt-gray);
     }
 
     #contact input[type=submit]:hover {
